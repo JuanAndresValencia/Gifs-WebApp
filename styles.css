@@ -64,6 +64,7 @@ header{
     cursor: pointer;
 }
 
+
 .searchbar-container input{
     width: 610px;
     padding: 10px;
@@ -72,6 +73,33 @@ header{
     outline: none;
     border-radius: 2px;
     border: none;
+}
+
+.deletegifs-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deletegifs-container button{
+    width: 160px;
+    padding: 8px;
+    background-color: #E51E9F;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: var(--fuente-titulos);
+    font-weight: bolder;
+    outline: none;
+    cursor: pointer;
+}
+
+.deletegifs-container p{
+    margin-top: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: var(--fuente-textos);
+    text-align: center;
 }
 
 /*Responsive Mobile, searchbar */
@@ -99,6 +127,63 @@ nav{
     margin-top: 30px;
 }
 
+/*Estilos search section*/
+.search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-title{
+    width: 80%;
+    max-width: 1460px;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.search-title h1{
+    font-size: 33px;
+    font-family: var(--fuente-titulos);
+    font-weight: bolder;
+}
+
+.container-fullsearch{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    bottom: 45px;
+}
+
+
+.search-content{
+    width: 75%;
+    max-width: 1500px;
+    display: flex;
+    height: 300px;
+    gap: 10px;
+    overflow: hidden;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+.search-content img{
+    border-radius: 5px;
+    height: 220px;
+}
+
+.search-content img:hover{
+    transform: scale(1.1);
+}
+/*Estilos Trending section*/
 .trending-container{
     width: 100%;
     display: flex;
@@ -125,15 +210,16 @@ nav{
 .container-fulltrending{
     width: 100%;
     height: auto;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
+    bottom: 45px;
 }
 
-.arrow-before img, .arrow-after img{
+.arrow-before img, .arrow-after img, .arrow-before-search img, .arrow-after-search img{
     width: 40px;
     cursor: pointer;
 }
@@ -142,26 +228,16 @@ nav{
     width: 75%;
     max-width: 1500px;
     display: flex;
-    height: 260px;
+    height: 300px;
     gap: 10px;
     overflow: hidden;
     align-items: center;
     scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 800px) {
-    .trending-content{
-        width: 98%;
-        overflow: auto;
-    }
-    .trending-content img{
-        width: 170px;
-    }
-}
-
 .trending-content img{
     border-radius: 5px;
-    height: 160px;
+    height: 190px;
 }
 
 .trending-content img:hover{
@@ -169,4 +245,115 @@ nav{
     transform-origin: center;
     position: relative;
     
+}
+
+@media screen and (max-width: 800px) {
+    .trending-content, .search-content{
+        width: 98%;
+        overflow: auto;
+    }
+    .trending-content img, .search-content img{
+        width: 200px;
+    }
+}
+
+/*Fin estilos trending*/
+
+/*estilos deportes*/
+
+.deportes-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    bottom: 30px;
+    position: relative;
+}
+
+.deportes-title{
+    width: 80%;
+    max-width: 1460px;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.deportes-title h1{
+    font-size: 33px;
+    font-family: var(--fuente-titulos);
+    font-weight: bolder;
+}
+
+.container-fulldeportes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deportes-content{
+    width: 80%;
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    gap: 15px;
+    padding-bottom: 70px;
+}
+
+.deportes-content img{
+    width: 250px;
+    height: 250px;
+}
+
+
+/*Fin estilos deportes*/
+
+/*Estilos animales*/
+.animales-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    bottom: 30px;
+    position: relative;
+}
+
+.animales-title{
+    width: 80%;
+    max-width: 1460px;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.animales-title h1{
+    font-size: 33px;
+    font-family: var(--fuente-titulos);
+    font-weight: bolder;
+}
+
+.container-fullanimales{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.animales-content{
+    width: 80%;
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.animales-content img{
+    max-width: 250px;
 }

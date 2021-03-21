@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gifs App</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     
@@ -17,11 +15,15 @@
           <header>
               <section class="sub-header">
                  <div class="app-title-container">
-                    <h1><span style="color:#1e2ede">G</span><span style="color:#04e762;">I</span><span style="color:#f4e409;">F</span><span style="color:#d81e5b;">S</span> APP</h1>
+                    <h1><span style="color:#1e2ede">G</span><span style="color:#04e762;">I</span><span style="color:#E5FA19;">F</span><span style="color:#d81e5b;">S</span> WEB APP</h1>
                  </div>
                  <div class="searchbar-container">
-                    <input type="text" placeholder="Ingresa el nombre del gif que quieras buscar">
-                    <img src="./assets/lupa-search.svg" alt="">
+                    <input type="text" placeholder="Ingresa el nombre del gif que quieras buscar" id="gifsearch" class="gif-search">
+                    <img src="./assets/lupa-search.svg" alt="" id="buttonsearch">
+                 </div>
+                 <div class="deletegifs-container">
+                    <button id="deletegifs">Eliminar Gifs</button>
+                    <p>Recuerde eliminar los gifs antes de realizar otra busqueda</p>
                  </div>
               </section>
           </header>
@@ -29,6 +31,20 @@
           <!--Incluye Algunos gifs de tendencia-->
           <nav>
              <section class="sub-nav">
+
+                <!--Seccion de gifs, que busca el usuario-->
+                <section class="search-container">
+                  <div class="search-title">
+                     <h1>Tu Busqueda</h1>
+                  </div>
+                  <div class="container-fullsearch">
+                     <div class="arrow-before-search"><img src="./assets/beforearrow.svg" alt=""></div>
+                     <div class="search-content"></div>
+                     <div class="arrow-after-search"><img src="./assets/nextarrow.svg" alt=""></div>
+                  </div>
+
+                </section>
+                <!--Seccion de gifs Trending-->
                 <section class="trending-container">
                     <div class="trending-title">
                        <h1>Tendencias</h1>
@@ -39,15 +55,37 @@
                         <div class="arrow-after"><img src="./assets/nextarrow.svg" alt=""></div>
                     </div>
                 </section>
+
+                <!--Seccion de gifs Deportes-->
+                <section class="deportes-container">
+                   <div class="deportes-title">
+                      <h1>Deportes</h1>
+                   </div>
+                   <div class="container-fulldeportes">
+                      <div class="deportes-content"></div>
+                   </div>
+                </section>
+
+                <!--Seccion de gifs Animales -->
+                <section class="animales-container">
+                   <div class="animales-title">
+                      <h1>Animales</h1>
+                   </div>
+                   <div class="container-fullanimales">
+                      <div class="animales-content">
+
+                      </div>
+
+                   </div>
+                </section>
+
              </section>
           </nav>
        </div>
     </div>
 
 
-
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="index.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
